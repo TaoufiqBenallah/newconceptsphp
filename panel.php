@@ -1,0 +1,5 @@
+<?php 
+
+// managing panels 
+
+?>
