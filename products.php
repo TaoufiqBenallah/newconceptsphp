@@ -12,7 +12,9 @@ $sth = $pdo->prepare("SELECT * FROM product");
 $sth->execute();
 
 $result = $sth->fetchAll();
-print_r($result);
+
+header('Content-Type: application/json');
+echo json_encode($result);
 
 
 ?>
