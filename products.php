@@ -11,7 +11,7 @@ $pdo = new PDO($dsn, $user, $passwd);
 $sth = $pdo->prepare("SELECT * FROM product");
 $sth->execute();
 
-$result = $sth->fetchAll();
+$result = $sth->fetchAll(PDO::FETCH_OBJ);
 
 header('Content-Type: application/json');
 echo json_encode($result);
